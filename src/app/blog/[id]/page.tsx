@@ -33,7 +33,7 @@ interface BlogPageProps {
 
 export default async function BlogPage({ params }: BlogPageProps) {
 
-    const { id } = await params;
+    const { id } = params;
     const blogId = parseInt(id);
     const blog = blogs.find(blog => blog.id === blogId);
 
