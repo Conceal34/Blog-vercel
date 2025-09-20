@@ -7,7 +7,7 @@ export default function Contact() {
     const [email, setEmail] = useState("")
     const [message, setMessage] = useState("")
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
         console.log(name, email, message);
         redirect("/")
