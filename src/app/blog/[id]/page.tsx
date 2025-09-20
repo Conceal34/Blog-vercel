@@ -24,12 +24,12 @@ const blogs =
     ]
 
 
-interface BlogPageProps {
-    params: Promise<{id: string}>
+type PageProps = {
+    params: Promise<{ id: string }>
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
-
-export default async function BlogPage({ params }: BlogPageProps) {
+export default async function BlogPage({ params }: PageProps) {
 
     const { id } = await params;
     const blogId = parseInt(id);
