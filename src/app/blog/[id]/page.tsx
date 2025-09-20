@@ -25,9 +25,7 @@ const blogs =
 
 
 interface BlogPageProps {
-    params: {
-        id: string
-    };
+    params: Promise<{id: string}>
 }
 
 
